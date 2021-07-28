@@ -1,0 +1,31 @@
+name: gda_brain_tumors
+channels:
+  - anaconda-fusion
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - h5py
+    - imageio
+    - jupyter-tensorboard
+    - jupyter
+    - keras-applications
+    - keras-preprocessing
+    - kiwisolver
+    - markdown
+    - matplotlib
+    - numpy
+    - pandas
+    - flask
+    - flask_restfull
+    - pillow
+    - scikit-image
+    - scikit-learn
+    - scipy
+    - sklearn
+    - spark-parser
+    - tensorboard
+    - tensorflow-estimator
+    - tensorflow
+    - termcolor
