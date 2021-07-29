@@ -9,7 +9,7 @@ from pydicom.pixel_data_handlers.util import apply_voi_lut
 import matplotlib.pyplot as plt
 
 
-def read_xray(path, voi_lut=True, fix_monochrome=True):
+def read_mri(path, voi_lut=True, fix_monochrome=True):
     dicom = pydicom.read_file(path)
 
     # VOI LUT (if available by DICOM device) is used to transform raw DICOM data to "human-friendly" view
