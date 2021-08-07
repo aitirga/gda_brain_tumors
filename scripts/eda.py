@@ -27,6 +27,12 @@ class EDA:
         temp_paths = list(Path(self.data_path).joinpath('train').glob('*'))
         return temp_paths
 
+    def get_test_mri_paths(self):
+        """This method extracts the folder names for the test MRIs"""
+        assert self.data_path is not None, 'A valid data_path needs to be provided'
+        temp_paths = list(Path(self.data_path).joinpath('test').glob('*'))
+        return temp_paths
+
     @staticmethod
     def read_mri(path, voi_lut=True, fix_monochrome=True):
         dicom = pydicom.read_file(path)
