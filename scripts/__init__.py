@@ -1,3 +1,1 @@
-
-def p(a: str) -> str:
-    return "2"
+from .eda import EDA
