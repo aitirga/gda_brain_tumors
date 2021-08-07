@@ -3,7 +3,7 @@ This script contains various useful methods to carry out Exploratory Data Analys
 The dicom reading method has been taken from 'https://www.kaggle.com/raddar/convert-dicom-to-np-array-the-correct-way'
 '''
 import pathlib
-
+from config import config
 import numpy as np
 import pydicom
 from pydicom.pixel_data_handlers.util import apply_voi_lut
@@ -18,6 +18,14 @@ logger = logging.getLogger(__file__)
 
 class EDA:
     """This class contains method and functions to carry out EDA of the gda brain tumors kaggle project"""
+    def __init__(self, data_path=None):
+        self.data_path = Path(data_path) if data_path else config.paths.data_folder if config.paths.data_folder else None
+
+    def get_training_mri_paths(self):
+        """This method extracts the folder names for the training MRIs"""
+        assert self.data_path is not None, 'A valid data_path needs to be provided'
+        temp_paths = list(Path(self.data_path).joinpath('train').glob('*'))
+        return temp_paths
 
     @staticmethod
     def read_mri(path, voi_lut=True, fix_monochrome=True):
