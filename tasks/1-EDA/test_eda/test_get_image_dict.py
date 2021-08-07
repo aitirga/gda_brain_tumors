@@ -1,7 +1,7 @@
 from pathlib import Path
 from config import config
 import logging
-from scripts.eda import EDA
+from scripts.ExploratoryDataAnalysis import EDA
 
 import matplotlib.pyplot as plt
 

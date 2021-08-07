@@ -1,6 +1,6 @@
 import unittest
 # from config import config
-from scripts.eda import EDA
+from scripts.ExploratoryDataAnalysis import EDA
 
 
 class EDACase(unittest.TestCase):

@@ -1,1 +1,1 @@
-from .eda import EDA
+from .ExploratoryDataAnalysis import EDA
