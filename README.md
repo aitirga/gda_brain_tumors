@@ -5,8 +5,11 @@ Kaggle competition about predicting images with brain tumors.
 [Link to Kaggle](https://www.kaggle.com/c/rsna-miccai-brain-tumor-radiogenomic-classification/team)
 
 
-
 ## Installation
+A conda environment for the project can be created running
+```
+conda env create -f /config/conda_env_config.yml
+```
 
 ## Code style
 

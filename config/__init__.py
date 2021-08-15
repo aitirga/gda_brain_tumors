@@ -17,10 +17,10 @@ def read_config(config_file: Path="./config.yaml"):
     return Box(context, default_box=True)
 
 
-_config_file = list(Path(os.getcwd()).glob("**/*config.yml") and Path(os.getcwd()).glob("**/*config.yaml") and Path().cwd().glob("*config*.yml") and Path().cwd().glob("*config*.yaml"))
+_config_file = list(Path().cwd().glob("**/*config.yml")) + list(Path().cwd().glob("**/*config.yaml")) + list(Path().cwd().glob("*config*.yml")) + list(Path().cwd().glob("*config*.yaml"))
+
 _config_file = _config_file if _config_file else list(Path(__file__).parent.glob("config.yml"))
-print(_config_file)
-assert len(_config_file) == 1, "Please provide a configuration file that has a '*config.yaml' name structure"
+assert len(_config_file) >= 1, "Please provide a configuration file that has a '*config.yaml' name structure"
 config = read_config(config_file=_config_file[0])
 
 # Add global configuration

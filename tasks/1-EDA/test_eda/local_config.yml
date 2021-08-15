@@ -1,0 +1,9 @@
+paths:
+  data_folder: ../../../data/rsna-miccai-brain-tumor-radiogenomic-classification
+
+eda:
+
+general:
+
+training:
+  prop: 0.5
